@@ -3,6 +3,7 @@ package spaceinv;
 import java.awt.EventQueue;
 import javax.swing.JFrame;
 
+@SuppressWarnings("serial")
 public class SpaceInvaders extends JFrame implements Commons{
 
 	public SpaceInvaders() {

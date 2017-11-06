@@ -16,6 +16,7 @@ import java.util.Random;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
+@SuppressWarnings("serial")
 public class Board extends JPanel implements Runnable, Commons {
 	private Dimension d;
     private ArrayList<Alien> aliens;
@@ -80,7 +81,8 @@ public class Board extends JPanel implements Runnable, Commons {
 
     public void drawAliens(Graphics g) {
 
-        Iterator it = aliens.iterator();
+        @SuppressWarnings({ "rawtypes", "unused" })
+		Iterator it = aliens.iterator();
 
         for (Alien alien: aliens) {
 
@@ -173,6 +175,7 @@ public class Board extends JPanel implements Runnable, Commons {
                 BOARD_WIDTH / 2);
     }
 
+    @SuppressWarnings("rawtypes")
     public void animationCycle() {
 
         if (deaths == NUMBER_OF_ALIENS_TO_DESTROY) {
